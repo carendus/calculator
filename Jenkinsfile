@@ -31,7 +31,7 @@ pipeline {
                } 
           } 
           
-          stage("Docker build") { 
+          /*stage("Docker build") { 
                steps { 
                     sh "docker build -t leszko/calculator ." 
                } 
@@ -47,7 +47,7 @@ pipeline {
                     sleep 60 
                     sh "./gradlew acceptanceTest -Dcalculator.url=http://localhost:8765"
                } 
-          }
+          }*/
      } 
      post { 
           always { 
