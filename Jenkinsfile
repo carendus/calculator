@@ -31,7 +31,7 @@ pipeline {
                }
           }
 
-          stage("Docker build") {
+          /*stage("Docker build") {
                steps {
                     sh "docker build -t leszko/calculator:${BUILD_TIMESTAMP} ."
                }
@@ -85,6 +85,6 @@ pipeline {
                   sleep 60
                   sh "chmod +x smoke-test.sh && ./smoke-test.sh"
               }
-          }
+          }*/
      }
 }
