@@ -44,6 +44,7 @@ pipeline {
 
           stage("Docker build") {
                steps {
+                    sh "systemctl start docker"
                     sh "docker build -t carendus/calculator ."
                }
           }
