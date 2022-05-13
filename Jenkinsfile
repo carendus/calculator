@@ -33,7 +33,7 @@ pipeline {
                          reportDir: 'build/reports/checkstyle/',
                          reportFiles: 'main.html',
                          reportName: 'Checkstyle Report'
-])
+          ])
                }
           }
           stage('Package') {
@@ -41,14 +41,14 @@ pipeline {
                     sh './gradlew build'
                }
           }
-
-          /*stage("Docker build") {
+          
+          stage("Docker build") {
                steps {
                     //sh "dockerd"
                     sh "docker build -t carendus/calculator ."
                }
           }
-
+ /*
           stage("Deploy to staging") {
                steps {
                     sh "docker run -d --rm -p 8765:8080 --name calculator carendus/calculator"
