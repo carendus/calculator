@@ -64,5 +64,5 @@ pipeline {
           always {
                sh "docker stop calculator"
           }
-     } 
+     }
 }
