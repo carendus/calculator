@@ -42,13 +42,13 @@ pipeline {
                }
           }
 
-          stage("Docker build") {
+          /*stage("Docker build") {
                steps {
                     sh "dockerd"
                     sh "docker build -t carendus/calculator ."
                }
           }
-/*
+
           stage("Deploy to staging") {
                steps {
                     sh "docker run -d --rm -p 8765:8080 --name calculator leszko/calculator"
