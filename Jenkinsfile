@@ -42,7 +42,7 @@ pipeline {
                }
           }
 
-          /*stage("Docker build") {
+          stage("Docker build") {
                steps {
                     //sh "dockerd"
                     sh "docker build -t carendus/calculator ."
@@ -59,7 +59,7 @@ pipeline {
                     sleep 60
                     sh "./gradlew acceptanceTest -Dcalculator.url=http://localhost:8765"
                }
-          }*/
+          }
      }
      /*post {
           always {
