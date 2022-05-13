@@ -53,12 +53,12 @@ pipeline {
                     sh "docker run -d --rm -p 8765:8080 --name calculator carendus/calculator"
                }
           }
-          stage("Acceptance test") {
+          /*stage("Acceptance test") {
                steps {
                     sleep 60
                     sh "./gradlew acceptanceTest -Dcalculator.url=http://localhost:8765"
                }
-          }
+          }*/
      }
      post {
           always {
